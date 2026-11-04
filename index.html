@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student  | إدارة نتائج الطلاب</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="#"><span class="brand-icon">S</span> STUDENT<span></span></a>
+  <p class="nav-caption">القائمة الرئيسية</p>
+  <a class="nav-link active" href="#overview">▦　لوحة التحكم</a>
+  <a class="nav-link" href="#students">♙　بيانات الطلاب</a>
+  <a class="nav-link" href="#mercy">　لجنة الرأفة</a>
+  <div class="profile"><div class="profile-avatar">A</div><div><b>إدارة النظام</b><small>مسؤول النظام</small></div></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><small>معهد الدلتا العالي لنظم ومعلومات </small><h1>Aya samir</h1></div><div class="online"><i></i> النظام يعمل <span class="user-avatar">A</span></div></header>
+<section class="hero" id="overview">
+  <div class="hero-text"><span class="hero-label">مرحباً بك في Student </span><h2>إدارة المعهد ، ونتائج الطلاب .</h2><p>تابع الأداء الأكاديمي، راجع النتائج، واكتشف الطلاب المستحقين للرأفة من مكان واحد.</p><a href="#students">عرض بيانات الطلاب　←</a></div>
+  <div class="hero-graphic"><div class="ring ring-a"></div><div class="ring ring-b"></div><div class="cap">🎓</div><div class="float-tag"> تحليل أكاديمي</div></div>
+</section>
+<section class="stats">
+  <article class="stat blue"><div class="stat-head">إجمالي الطلاب <span>♙</span></div><strong id="totalStudents">0</strong><small>عدد الطلاب المسجلين</small><div class="bar"><i style="width:100%"></i></div></article>
+  <article class="stat green"><div class="stat-head">الطلاب الناجحون <span>✓</span></div><strong id="passedStudents">0</strong><small>اجتازوا شروط النجاح</small><div class="bar"><i id="passedBar"></i></div></article>
+  <article class="stat orange"><div class="stat-head">يحتاجون مراجعة <span>!</span></div><strong id="reviewStudents">0</strong><small>بحاجة إلى متابعة</small><div class="bar"><i id="reviewBar"></i></div></article>
+  <article class="stat purple"><div class="stat-head">لجنة الرأفة <span></span></div><strong id="mercyStudents">0</strong><small>طلاب ضمن الفئة المستحقة</small><div class="bar"><i id="mercyBar"></i></div></article>
+</section>
+<section class="panel" id="students">
+  <div class="panel-title"><div><small>STUDENT </small><h3>بيانات الطلاب والنتائج</h3><p>ملخص الأداء  لكل طالب.</p></div><span class="pill">قائمة الطلاب <b id="tableCount">04</b></span></div>
+  <div class="table-responsive"><table class="table custom-table text-center align-middle mb-0"><thead><tr><th>رقم الجلوس</th><th>اسم الطالب</th><th>الدرجات</th><th>الحضور</th><th>المتوسط</th><th>التقدير</th><th>النتيجة</th></tr></thead><tbody id="studentsTable"></tbody></table></div>
+</section>
+<section class="panel" id="mercy">
+  <div class="panel-title"><div><small>SPECIAL REVIEW</small><h3>لجنة الرأفة</h3><p>إضافة خمس درجات لمتوسط الطلاب الذين تتراوح درجاتهم بين 40 و49.</p></div><span class="mercy-pill">+5 درجات دعم</span></div>
+  <div class="table-responsive"><table class="table custom-table text-center align-middle mb-0"><thead><tr><th>رقم الجلوس</th><th>اسم الطالب</th><th>قبل الرأفة</th><th>بعد الرأفة</th></tr></thead><tbody id="mercyTable"></tbody></table></div>
+  <div class="mercy-result"><div><span></span><div><b>متوسط المتعثرين بعد الرأفة</b><small>المتوسط العام للطلاب المستفيدين</small></div></div><strong id="mercyAverage">—</strong></div>
+</section>
+<footer>STUDENT  <span>•</span> نظام إدارة وتحليل نتائج الطلاب</footer>
+</main></div>
+<script src="script.js"></script>
+</body></html>
